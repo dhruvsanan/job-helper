@@ -6,7 +6,7 @@ import pyperclip
 load_dotenv()
 
 
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+# genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 
 def get_gemini_response(a, b, c, d):
