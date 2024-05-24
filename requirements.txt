@@ -1,8 +1,4 @@
 streamlit 
 google-generativeai
-PyPDF2
-python-dotenv
-bs4
 pyperclip
-PyQt4
-gtk
+clipman
