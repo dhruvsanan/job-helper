@@ -2,8 +2,12 @@ import google.generativeai as genai
 import streamlit as st
 import pyperclip
 import clipman
+import tkinter as tk
 
 # genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+
+root = tk.Tk()
+root.withdraw()
 
 
 def get_gemini_response(a, b, c, d):
@@ -69,8 +73,8 @@ if per:
     st.success('Text copied successfully!')
 
 if git:
-    a = "https://github.com/dhruvsanan"
-    pyperclip.copy(a)
+    root.clipboard_clear()
+    root.clipboard_append("https://github.com/dhruvsanan")
     st.success('Text copied successfully!')
 
 

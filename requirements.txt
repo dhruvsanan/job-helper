@@ -1,5 +1,5 @@
 streamlit 
 google-generativeai
 pyperclip
-python==3.10
-gtk
+pyqt5
+python3-tk
