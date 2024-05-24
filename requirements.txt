@@ -2,3 +2,4 @@ streamlit
 google-generativeai
 pyperclip
 pyqt5
+gtk4
