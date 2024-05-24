@@ -1,5 +1,4 @@
 streamlit 
 google-generativeai
 pyperclip
-pyqt5
-gtk4
+st-copy-to-clipboard

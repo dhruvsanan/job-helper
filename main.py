@@ -2,6 +2,7 @@ import google.generativeai as genai
 import streamlit as st
 import pyperclip
 # genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+from st_copy_to_clipboard import st_copy_to_clipboard
 
 
 def get_gemini_response(a, b, c, d):
@@ -62,7 +63,7 @@ if lin:
     st.success('Text copied successfully!')
 
 if per:
-    pyperclip.copy("https://dhruvsanan.vercel.app")
+    st_copy_to_clipboard("https://dhruvsanan.vercel.app")
     st.success('Text copied successfully!')
 
 if git:
