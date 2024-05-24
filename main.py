@@ -2,7 +2,6 @@ import google.generativeai as genai
 import streamlit as st
 import pyperclip
 import clipman
-clipman.init()
 
 # genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
@@ -61,6 +60,7 @@ with col3:
 
 
 if lin:
+    clipman.init()
     clipman.set("https://www.linkedin.com/in/dhruvsanan01/")
     st.success('Text copied successfully!')
 
