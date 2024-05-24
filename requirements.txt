@@ -3,4 +3,3 @@ google-generativeai
 pyperclip
 clipman
 xclip
-wl-clipboard
