@@ -127,17 +127,18 @@ if 'email' not in st.session_state:
 
 show_answer = st.button("Show Answer")
 if show_answer:
-    if 'q' in st.session_state:
-        st.write(q)
+    if st.session_state['q']:
+        st.write(st.session_state['a'])
 
-    elif 'qa' in st.session_state:
-        st.write(qa)
+    if st.session_state['qa']:
+        st.write(st.session_state['qa'])
 
-    elif 'cl' in st.session_state:
-        st.write(cl)
+    if st.session_state['cl']:
+        st.write(st.session_state['cl'])
 
-    elif 'email' in st.session_state:
-        st.write(email)
+    if st.session_state['email']:
+        st.write(st.session_state['email'])
+
 
 email_template = """Dear Colby and Nisar,
 
