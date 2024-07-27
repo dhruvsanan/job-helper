@@ -130,13 +130,13 @@ if show_answer:
     if 'q' in st.session_state:
         st.write(q)
 
-    if 'qa' in st.session_state:
+    elif 'qa' in st.session_state:
         st.write(qa)
 
-    if 'cl' in st.session_state:
+    elif 'cl' in st.session_state:
         st.write(cl)
 
-    if 'email' not in st.session_state:
+    elif 'email' in st.session_state:
         st.write(email)
 
 email_template = """Dear Colby and Nisar,
@@ -227,6 +227,7 @@ if q:
         st.write("Please write JT and JD")
 if qa:
     model = genai.GenerativeModel('gemini-1.5-pro-latest')
-    qa = model.generate_content([pdf_content, qa_prompt+ques])
+    response = model.generate_content([pdf_content, qa_prompt+ques])
+    qa = response.text
     st.session_state['qa'] = qa
     st.write(qa)
