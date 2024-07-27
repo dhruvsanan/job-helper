@@ -177,6 +177,7 @@ email_prompt = """ You are an expert in creating professional emails
                 Also, you are willing to relocate if necessary.
                 make sure that the email is interesting and eye catching, demonstrating your skills and experience and how can you contribute to the company if given the job.
                 make sure to follow the follwing template
+                But at the same time you have to sound professional as well.
                 """
 cl_prompt = """create a cover letter for this job using below format 
                 Greetings to the hiring team
@@ -201,8 +202,8 @@ cl_prompt = """create a cover letter for this job using below format
                 Name
                 Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
                 """
-q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job."""
-qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality."""
+q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
+qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality. But at the same time you have to sound professional as well."""
 
 if email:
     if jt and jd:
