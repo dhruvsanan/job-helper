@@ -105,131 +105,131 @@ else:
 
     with col7:
         qa = st.button("Resume Q&A")
+    clear_button, show_answer = st.columns(2)
+    with clear_button:
+        clear_button = st.button("Clear Results")
+    with show_answer:
+        show_answer = st.button("Show Answer")
+    if clear_button:
+        st.session_state['email'] = []
+        st.session_state['cl'] = []
+        st.session_state['q'] = []
 
+    if 'q' not in st.session_state:
+        st.session_state['q'] = []
 
-# clear_button = st.button("Clear Results")
-# if clear_button:
-#     st.session_state['email'] = []
-#     st.session_state['cl'] = []
-#     st.session_state['q'] = []
+    if 'qa' not in st.session_state:
+        st.session_state['qa'] = []
 
-if 'q' not in st.session_state:
-    st.session_state['q'] = []
+    if 'cl' not in st.session_state:
+        st.session_state['cl'] = []
 
-if 'qa' not in st.session_state:
-    st.session_state['qa'] = []
+    if 'email' not in st.session_state:
+        st.session_state['email'] = []
 
-if 'cl' not in st.session_state:
-    st.session_state['cl'] = []
+    if show_answer:
+        if st.session_state['q']:
+            st.write(st.session_state['q'])
 
-if 'email' not in st.session_state:
-    st.session_state['email'] = []
+        if st.session_state['qa']:
+            st.write(st.session_state['qa'])
 
-show_answer = st.button("Show Answer")
-if show_answer:
-    if st.session_state['q']:
-        st.write(st.session_state['q'])
+        if st.session_state['cl']:
+            st.write(st.session_state['cl'])
 
-    if st.session_state['qa']:
-        st.write(st.session_state['qa'])
+        if st.session_state['email']:
+            st.write(st.session_state['email'])
 
-    if st.session_state['cl']:
-        st.write(st.session_state['cl'])
+    email_template = """Dear Colby and Nisar,
 
-    if st.session_state['email']:
-        st.write(st.session_state['email'])
+    I'm writing to express my strong interest in the Chief Technology Officer and Co-Founder position at ReFocus AI. Your mission to leverage AI for improving customer retention in the insurance industry deeply resonates with me. My background in both AI development and building full-stack SaaS applications makes me a perfect fit to lead your engineering team and contribute to ReFocus AI's growth.
 
+    In my previous role at Nvision Soft (Miami, Florida), I spearheaded the development of a smart Applicant Tracking System (ATS) that reduced hiring time by 60%. This project highlights my ability to deliver data-driven solutions that significantly impact business goals. 
 
-email_template = """Dear Colby and Nisar,
+    I'm also eager to highlight my personal projects that demonstrate my understanding of LLMs:
 
-I'm writing to express my strong interest in the Chief Technology Officer and Co-Founder position at ReFocus AI. Your mission to leverage AI for improving customer retention in the insurance industry deeply resonates with me. My background in both AI development and building full-stack SaaS applications makes me a perfect fit to lead your engineering team and contribute to ReFocus AI's growth.
+    AI Lead Magnet (SaaS Product): I spearheaded the development of a full-stack AI application that transforms content into interactive AI lead magnets. This project involved leveraging Langchain models to create a dynamic and engaging user experience.
+    ChatPDF (SaaS Product): I built a SaaS platform utilizing Next.js and OpenAI's capabilities. This platform allows users to upload PDFs for proprietary data training and efficient information extraction through an LLM model. My work focused on optimizing the LLM integration for seamless data processing and user experience.
+    Video Analyser project: I pushed the boundaries of AI capabilities by developing a video analysis tool before Gemini Pro could accept video inputs. This project utilized cutting-edge techniques:
+    Computer Vision: I leveraged computer vision libraries to extract individual frames from the video stream.
+    OpenAI's Whisper Model API: I integrated OpenAI's Whisper AI's API to analyse the spoken dialogue. This allowed me to analyze the video content based on both the visual information and the spoken dialogue.
+    This project demonstrates my ability to not only develop AI solutions but also translate them into user-centric applications that address real-world problems – a skillset directly applicable to ReFocus AI's mission.
 
-In my previous role at Nvision Soft (Miami, Florida), I spearheaded the development of a smart Applicant Tracking System (ATS) that reduced hiring time by 60%. This project highlights my ability to deliver data-driven solutions that significantly impact business goals. 
+    Having thrived in a remote environment at Nvision Soft (Miami, Florida), I'm confident in seamlessly integrating into your team and collaborating effectively across time zones. My strong communication skills and ability to explain complex technical concepts ensure clear collaboration within the team and with external partners.
 
-I'm also eager to highlight my personal projects that demonstrate my understanding of LLMs:
+    I'm eager to discuss how my expertise in AI development, full-stack development, and a passion for building impactful solutions can contribute to ReFocus AI's success. I'm available for a call at your earliest convenience.
 
-AI Lead Magnet (SaaS Product): I spearheaded the development of a full-stack AI application that transforms content into interactive AI lead magnets. This project involved leveraging Langchain models to create a dynamic and engaging user experience.
-ChatPDF (SaaS Product): I built a SaaS platform utilizing Next.js and OpenAI's capabilities. This platform allows users to upload PDFs for proprietary data training and efficient information extraction through an LLM model. My work focused on optimizing the LLM integration for seamless data processing and user experience.
-Video Analyser project: I pushed the boundaries of AI capabilities by developing a video analysis tool before Gemini Pro could accept video inputs. This project utilized cutting-edge techniques:
-Computer Vision: I leveraged computer vision libraries to extract individual frames from the video stream.
-OpenAI's Whisper Model API: I integrated OpenAI's Whisper AI's API to analyse the spoken dialogue. This allowed me to analyze the video content based on both the visual information and the spoken dialogue.
-This project demonstrates my ability to not only develop AI solutions but also translate them into user-centric applications that address real-world problems – a skillset directly applicable to ReFocus AI's mission.
+    Thank you for your time and consideration. I've included a link to my calendar for scheduling convenience: 
 
-Having thrived in a remote environment at Nvision Soft (Miami, Florida), I'm confident in seamlessly integrating into your team and collaborating effectively across time zones. My strong communication skills and ability to explain complex technical concepts ensure clear collaboration within the team and with external partners.
+    Calendar
 
-I'm eager to discuss how my expertise in AI development, full-stack development, and a passion for building impactful solutions can contribute to ReFocus AI's success. I'm available for a call at your earliest convenience.
+    Sincerely,
 
-Thank you for your time and consideration. I've included a link to my calendar for scheduling convenience: 
+    Dhruv Sanan
+    +91-7901919447 |  Personal Website"""
+    email_prompt = """ You are an expert in creating professional emails
+                    I have provided you with resume and jd. 
+                    create an email to founder explaining why are you a good fit for given position. 
+                    the first few sentences should explain why are you a great fit for the job, 
+                    the second part should be an interesting part about you that related to the job so that they can see you know what you're talking about. 
+                    then you should talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
+                    then talk about ChatPDF, your project in the resume. 
+                    Also give them confidence and you have already worked with a company in US so time difference isn't really a problem for you. 
+                    Also, you are willing to relocate if necessary.
+                    make sure that the email is interesting and eye catching, demonstrating your skills and experience and how can you contribute to the company if given the job.
+                    make sure to follow the follwing template
+                    But at the same time you have to sound professional as well.
+                    """
+    cl_prompt = """create a cover letter for this job using below format 
+                    Greetings to the hiring team
 
-Calendar
+                    I am writing to express my strong interest in the XYZ role at ABC. With a comprehensive background in BLA BLA, I am enthusiastic about contributing to [ORG’s Name] mission of enhancing its [MISSION-whatever it may be].
+                    Intro- Use a catchy hook
+                    [2 lines- why you are interested/ your biggest achievement and how it relates to the role]- Ideally keep this generic since it will be recycled for 100s of apps.
 
-Sincerely,
+                    Work Ex
+                    Key work exs- Key project within each, how it relates to the job, and what you delivered in each job - USE NUMBERS
+                    Extra Curricular- But professional
+                    Talk about publications, awards, founding experience, teaching experience (Refer your CV)
+                    Your Commitment
+                    Write your heart out, we will edit it.
 
-Dhruv Sanan
-+91-7901919447 |  Personal Website"""
-email_prompt = """ You are an expert in creating professional emails
-                I have provided you with resume and jd. 
-                create an email to founder explaining why are you a good fit for given position. 
-                the first few sentences should explain why are you a great fit for the job, 
-                the second part should be an interesting part about you that related to the job so that they can see you know what you're talking about. 
-                then you should talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
-                then talk about ChatPDF, your project in the resume. 
-                Also give them confidence and you have already worked with a company in US so time difference isn't really a problem for you. 
-                Also, you are willing to relocate if necessary.
-                make sure that the email is interesting and eye catching, demonstrating your skills and experience and how can you contribute to the company if given the job.
-                make sure to follow the follwing template
-                But at the same time you have to sound professional as well.
-                """
-cl_prompt = """create a cover letter for this job using below format 
-                Greetings to the hiring team
+                    With nearly [EXP] years immersed in the [YOUR INDUSTRY] realm, I possess a deep understanding of its nuances. My blend of hands-on experience, academic proficiency, strong work ethic, and genuine passion positions me as an ideal fit for thriving in the dynamic and stimulating environment at [ORG].
 
-                I am writing to express my strong interest in the XYZ role at ABC. With a comprehensive background in BLA BLA, I am enthusiastic about contributing to [ORG’s Name] mission of enhancing its [MISSION-whatever it may be].
-                Intro- Use a catchy hook
-                [2 lines- why you are interested/ your biggest achievement and how it relates to the role]- Ideally keep this generic since it will be recycled for 100s of apps.
+                    Once again, thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align perfectly with [org’S] goals.
 
-                Work Ex
-                Key work exs- Key project within each, how it relates to the job, and what you delivered in each job - USE NUMBERS
-                Extra Curricular- But professional
-                Talk about publications, awards, founding experience, teaching experience (Refer your CV)
-                Your Commitment
-                Write your heart out, we will edit it.
+                    Best regards,
 
-                With nearly [EXP] years immersed in the [YOUR INDUSTRY] realm, I possess a deep understanding of its nuances. My blend of hands-on experience, academic proficiency, strong work ethic, and genuine passion positions me as an ideal fit for thriving in the dynamic and stimulating environment at [ORG].
+                    Name
+                    Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
+                    """
+    q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
+    qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality. But at the same time you have to sound professional as well."""
 
-                Once again, thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align perfectly with [org’S] goals.
-
-                Best regards,
-
-                Name
-                Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
-                """
-q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
-qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality. But at the same time you have to sound professional as well."""
-
-if email:
-    if jt and jd:
-        email = get_gemini_response(pdf_content, jt, jd, email_prompt)
-        st.session_state['email'] = email
-        st.write(email)
-    else:
-        st.write("Please write JT and JD")
-if cl:
-    if jt and jd:
-        cl = get_gemini_response(pdf_content, jt, jd, cl_prompt)
-        st.session_state['cl'] = cl
-        st.write(cl)
-    else:
-        st.write("Please write JT and JD")
-if q:
-    if jt and jd:
-        q = get_gemini_response(pdf_content, jt, jd, q_prompt+ques)
-        st.session_state['q'] = q
-        st.write(q)
-    else:
-        st.write("Please write JT and JD")
-if qa:
-    model = genai.GenerativeModel('gemini-1.5-pro-latest')
-    response = model.generate_content([pdf_content, qa_prompt+ques])
-    qa = response.text
-    st.session_state['qa'] = qa
-    st.write(qa)
+    if email:
+        if jt and jd:
+            email = get_gemini_response(pdf_content, jt, jd, email_prompt)
+            st.session_state['email'] = email
+            st.write(email)
+        else:
+            st.write("Please write JT and JD")
+    if cl:
+        if jt and jd:
+            cl = get_gemini_response(pdf_content, jt, jd, cl_prompt)
+            st.session_state['cl'] = cl
+            st.write(cl)
+        else:
+            st.write("Please write JT and JD")
+    if q:
+        if jt and jd:
+            q = get_gemini_response(pdf_content, jt, jd, q_prompt+ques)
+            st.session_state['q'] = q
+            st.write(q)
+        else:
+            st.write("Please write JT and JD")
+    if qa:
+        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+        response = model.generate_content([pdf_content, qa_prompt+ques])
+        qa = response.text
+        st.session_state['qa'] = qa
+        st.write(qa)
