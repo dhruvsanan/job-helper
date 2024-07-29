@@ -128,7 +128,7 @@ if 'email' not in st.session_state:
 show_answer = st.button("Show Answer")
 if show_answer:
     if st.session_state['q']:
-        st.write(st.session_state['a'])
+        st.write(st.session_state['q'])
 
     if st.session_state['qa']:
         st.write(st.session_state['qa'])
