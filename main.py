@@ -60,7 +60,7 @@ if on:
         st.success('Text copied successfully!')
 
     if git:
-        st_copy_to_clipboard("https://github.com/dhruvsanan")
+        st_copy_to_clipboard("https://github.com/dhruv-sanan")
         st.success('Text copied successfully!')
     if email_template:
         st_copy_to_clipboard("""Dear Colby and Nisar,
