@@ -105,9 +105,12 @@ else:
 
     with col7:
         qa = st.button("Resume Q&A")
+
     clear_button, show_answer = st.columns(2)
+
     with clear_button:
         clear_button = st.button("Clear Results")
+
     with show_answer:
         show_answer = st.button("Show Answer")
     if clear_button:
