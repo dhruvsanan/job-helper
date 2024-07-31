@@ -18,6 +18,7 @@ def get_gemini_response(a, b, c, d):
 
 
 st.set_page_config(page_title="My Resume")
+st.header("Job Application Helper")
 
 jt = ""
 jd = ""
