@@ -145,6 +145,7 @@ else:
 
     Dhruv Sanan
     +91-7901919447 |  Personal Website"""
+
     email_prompt = """ You are an expert in creating professional emails
                     I have provided you with resume and jd. 
                     create an email to founder explaining why are you a good fit for given position. 
@@ -159,6 +160,7 @@ else:
                     But at the same time you have to sound professional as well.
                     At the last, add a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
+
     cl_prompt = """create a cover letter for this job using below format 
                     Greetings to the hiring team
                     I am writing to express my strong interest in the XYZ role at ABC. With a comprehensive background in BLA BLA, I am enthusiastic about contributing to [ORG’s Name] mission of enhancing its [MISSION-whatever it may be].
@@ -174,8 +176,11 @@ else:
                     Once again, thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align perfectly with [org’S] goals.
                     Best regards,
                     Name
-                    Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
+                    Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. 
+                    Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
+                    At the last, add a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
+
     q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
     qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality. But at the same time you have to sound professional as well."""
 
