@@ -187,7 +187,7 @@ else:
                     Name
                     Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. 
                     Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
-                    At the last, add a link to introduction video and ask the person to see the video in order to learn more about me.
+                    Start the letter by adding a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
 
     q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
