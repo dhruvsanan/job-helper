@@ -64,7 +64,8 @@ if on:
         st_copy_to_clipboard("https://github.com/dhruv-sanan")
         st.success('Text copied successfully!')
     if email_template:
-        st_copy_to_clipboard("https://www.youtube.com/@dsanan01")
+        st_copy_to_clipboard(
+            "https://www.youtube.com/@dsanan01?sub_confirmation=1")
         st.success('Text copied successfully!')
 else:
     col1, col2, col3, col7 = st.columns(4)
