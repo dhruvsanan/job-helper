@@ -50,7 +50,7 @@ if on:
     with col6:
         git = st.button("Github")
     with col8:
-        email_template = st.button("Email Template")
+        email_template = st.button("YouTube")
 
     if lin:
         st_copy_to_clipboard("https://www.linkedin.com/in/dhruvsanan01/")
@@ -64,33 +64,7 @@ if on:
         st_copy_to_clipboard("https://github.com/dhruv-sanan")
         st.success('Text copied successfully!')
     if email_template:
-        st_copy_to_clipboard("""Dear Colby and Nisar,
-
-I'm writing to express my strong interest in the Chief Technology Officer and Co-Founder position at ReFocus AI. Your mission to leverage AI for improving customer retention in the insurance industry deeply resonates with me. My background in both AI development and building full-stack SaaS applications makes me a perfect fit to lead your engineering team and contribute to ReFocus AI's growth.
-
-In my previous role at Nvision Soft (Miami, Florida), I spearheaded the development of a smart Applicant Tracking System (ATS) that reduced hiring time by 60%. This project highlights my ability to deliver data-driven solutions that significantly impact business goals. 
-
-I'm also eager to highlight my personal projects that demonstrate my understanding of LLMs:
-
-AI Lead Magnet (SaaS Product): I spearheaded the development of a full-stack AI application that transforms content into interactive AI lead magnets. This project involved leveraging Langchain models to create a dynamic and engaging user experience.
-ChatPDF (SaaS Product): I built a SaaS platform utilizing Next.js and OpenAI's capabilities. This platform allows users to upload PDFs for proprietary data training and efficient information extraction through an LLM model. My work focused on optimizing the LLM integration for seamless data processing and user experience.
-Video Analyser project: I pushed the boundaries of AI capabilities by developing a video analysis tool before Gemini Pro could accept video inputs. This project utilized cutting-edge techniques:
-Computer Vision: I leveraged computer vision libraries to extract individual frames from the video stream.
-OpenAI's Whisper Model API: I integrated OpenAI's Whisper AI's API to analyse the spoken dialogue. This allowed me to analyze the video content based on both the visual information and the spoken dialogue.
-This project demonstrates my ability to not only develop AI solutions but also translate them into user-centric applications that address real-world problems – a skillset directly applicable to ReFocus AI's mission.
-
-Having thrived in a remote environment at Nvision Soft (Miami, Florida), I'm confident in seamlessly integrating into your team and collaborating effectively across time zones. My strong communication skills and ability to explain complex technical concepts ensure clear collaboration within the team and with external partners.
-
-I'm eager to discuss how my expertise in AI development, full-stack development, and a passion for building impactful solutions can contribute to ReFocus AI's success. I'm available for a call at your earliest convenience.
-
-Thank you for your time and consideration. I've included a link to my calendar for scheduling convenience: 
-
-Calendar
-
-Sincerely,
-
-Dhruv Sanan
-+91-7901919447 |  Personal Website""")
+        st_copy_to_clipboard("https://www.youtube.com/@dsanan01")
         st.success('Text copied successfully!')
 else:
     col1, col2, col3, col7 = st.columns(4)
