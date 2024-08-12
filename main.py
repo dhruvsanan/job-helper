@@ -157,27 +157,22 @@ else:
                     make sure that the email is interesting and eye catching, demonstrating your skills and experience and how can you contribute to the company if given the job.
                     make sure to follow the follwing template
                     But at the same time you have to sound professional as well.
+                    At the last, add a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
     cl_prompt = """create a cover letter for this job using below format 
                     Greetings to the hiring team
-
                     I am writing to express my strong interest in the XYZ role at ABC. With a comprehensive background in BLA BLA, I am enthusiastic about contributing to [ORG’s Name] mission of enhancing its [MISSION-whatever it may be].
                     Intro- Use a catchy hook
                     [2 lines- why you are interested/ your biggest achievement and how it relates to the role]- Ideally keep this generic since it will be recycled for 100s of apps.
-
-                    Work Ex
+                    Work Ex:
                     Key work exs- Key project within each, how it relates to the job, and what you delivered in each job - USE NUMBERS
                     Extra Curricular- But professional
                     Talk about publications, awards, founding experience, teaching experience (Refer your CV)
                     Your Commitment
                     Write your heart out, we will edit it.
-
                     With nearly [EXP] years immersed in the [YOUR INDUSTRY] realm, I possess a deep understanding of its nuances. My blend of hands-on experience, academic proficiency, strong work ethic, and genuine passion positions me as an ideal fit for thriving in the dynamic and stimulating environment at [ORG].
-
                     Once again, thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align perfectly with [org’S] goals.
-
                     Best regards,
-
                     Name
                     Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
                     """
