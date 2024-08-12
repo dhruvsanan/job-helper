@@ -72,7 +72,7 @@ if on:
         st.success('Text copied successfully!')
     if video:
         st_copy_to_clipboard(
-            "https://youtu.be/1_Y7NtQLwc4?si=DBGFzRQEst_3Zvv4")
+            "https://www.youtube.com/watch?v=1_Y7NtQLwc4")
         st.success('Text copied successfully!')
 
 else:
