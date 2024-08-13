@@ -25,7 +25,7 @@ jd = ""
 pdf_content = """Dhruv Sanan Education Indian Institute of Technology Madras Bachelor of Science (BS) in Data Science and Applications. CGPA 7.89 
     I.K.G Punjab Technical University Bachelor of Technology [B.Tech] in Computer Science and Engineering CGPA 7.72 
     Experience Nvision Soft (remote) Miami, Florida Jan 2024 – Mar 2024 ● Generative AI Full stack developer o Reduced hiring time by 60% by developing a smart Applicant Tracking System (ATS) and saving 20% in recruitment costs.
-    o Automated resume review, enabling the processing of over 150 resumes per hour. o Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork. 
+    o Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork. 
     Indian Institute of Technology Madras (remote) Chennai, India ● Project Mentor/TA for Application Development Project (BSCS2003P) Aug 2023 – Dec 2023 o Mentored 20+ students in a comprehensive web application development project, resulting in 15+ fully functional web apps. o Delivered 40+ hours of instruction on HTML, CSS, JavaScript, Flask, and SQLite, enhancing students full-stack development capabilities. o Oversaw the implementation of secure authentication protocols and the integration APIs, improving app functionality and user experience. 
     ● Viva Examiner for Application Development Project (BSCS2006P) Aug 2023 – Dec 2023 o Conducted viva sessions for students, evaluating 100+ projects on advanced web technologies. o Provided constructive feedback, resulting in a 20% improvement in project quality and results. 
     Skills Artificial Intelligence: Langchain, LangGraph, Hugging Face, Crew AI, Open AI Assistant, Open Source LLMs, OpenAI, Google Gemini, Vector Databases, RAG Apps Frontend: React.js, Next.js, TypeScript, Tailwind, Shadcn, Vuejs Backend: Rest APIs, Node.js, Python, Stripe, Payload, Nodemailer, tRPC, Clerk, Flask, Resend, Redis, Celery, OpenCV Database: MySQL, Postgres, MongoDB, PineconeDB 
@@ -160,7 +160,7 @@ else:
                     create an email to founder explaining why are you a good fit for given position. 
                     the first few sentences should explain why are you a great fit for the job, 
                     the second part should be an interesting part about you that related to the job so that they can see you know what you're talking about. 
-                    then you should talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
+                    then you should talk about your previous experience at NvisionSoft. Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
                     then talk about ChatPDF, your project in the resume. 
                     Also give them confidence and you have already worked with a company in US so time difference isn't really a problem for you. 
                     Also, you are willing to relocate if necessary.
@@ -185,7 +185,7 @@ else:
                     Once again, thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align perfectly with [org’S] goals.
                     Best regards,
                     Name
-                    Make sure to talk about your previous experience at NvisionSoft where you Automated resume review, enabling the processing of over 150 resumes per hour. 
+                    Make sure to talk about your previous experience at NvisionSoft where you Automated resume review. 
                     Applied advanced relevance techniques to shortlist the top 10% of candidates, ensuring high-quality hires and improved talent acquisition outcomes through cross-functional teamwork.
                     Start the letter by adding a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
