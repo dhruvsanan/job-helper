@@ -167,7 +167,7 @@ else:
                     make sure that the email is interesting and eye catching, demonstrating your skills and experience and how can you contribute to the company if given the job.
                     make sure to follow the follwing template
                     But at the same time you have to sound professional as well.
-                    At the last, add a link to introduction video and ask the person to see the video in order to learn more about me.
+                    Start the letter by adding a link to introduction video and ask the person to see the video in order to learn more about me.
                     """
 
     cl_prompt = """create a cover letter for this job using below format 
