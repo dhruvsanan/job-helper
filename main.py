@@ -213,7 +213,8 @@ else:
             st.write("Please write JT and JD")
     if linkedin:
         if jt and jd:
-            linkedin = get_gemini_response(pdf_content, jt, jd, email_prompt)
+            linkedin = get_gemini_response(
+                pdf_content, jt, jd, linkedin_prompt)
             st.session_state['linkedin'] = linkedin
             st.write(linkedin)
         else:
