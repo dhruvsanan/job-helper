@@ -76,7 +76,7 @@ if on:
         st.success('Text copied successfully!')
 
 else:
-    col1, col2, col3, col7, col10 = st.columns(4)
+    col1, col2, col3, col7, col10 = st.columns(5)
 
     with col1:
         email = st.button("Email")
