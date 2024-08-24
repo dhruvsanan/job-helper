@@ -76,7 +76,7 @@ if on:
         st.success('Text copied successfully!')
 
 else:
-    col1, col2, col3, col7 = st.columns(4)
+    col1, col2, col3, col7, col10 = st.columns(4)
 
     with col1:
         email = st.button("Email")
@@ -86,6 +86,8 @@ else:
 
     with col3:
         q = st.button("Q&A")
+    with col10:
+        linkedin = st.button("linkedin")
 
     with col7:
         qa = st.button("Resume Q&A")
@@ -101,7 +103,11 @@ else:
         st.session_state['email'] = []
         st.session_state['cl'] = []
         st.session_state['q'] = []
+        st.session_state['qa'] = []
+        st.session_state['linkedin'] = []
 
+    if 'linkedin' not in st.session_state:
+        st.session_state['linkedin'] = []
     if 'q' not in st.session_state:
         st.session_state['q'] = []
 
@@ -117,6 +123,8 @@ else:
     if show_answer:
         if st.session_state['q']:
             st.write(st.session_state['q'])
+        if st.session_state['linkedin']:
+            st.write(st.session_state['linkedin'])
 
         if st.session_state['qa']:
             st.write(st.session_state['qa'])
@@ -190,12 +198,19 @@ else:
 
     q_prompt = """Using the Jd and resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. But at the same time you have to sound professional as well."""
     qa_prompt = """Using resume, Answer the question in an interesting and eye catching way demonstrating your skills and experience and how can you contribute to the company if given the job. Your answer should reflect your personality. But at the same time you have to sound professional as well."""
-
+    linkedin_prompt = "Create a LinkedIn message to founder for this job telling how you're a good fir for this job, how company's mission aligns with yours and how your skills matches with the one required in job. keep a professional tone. make it under 500 characters"
     if email:
         if jt and jd:
             email = get_gemini_response(pdf_content, jt, jd, email_prompt)
             st.session_state['email'] = email
             st.write(email)
+        else:
+            st.write("Please write JT and JD")
+    if linkedin:
+        if jt and jd:
+            linkedin = get_gemini_response(pdf_content, jt, jd, email_prompt)
+            st.session_state['linkedin'] = linkedin
+            st.write(linkedin)
         else:
             st.write("Please write JT and JD")
     if cl:
