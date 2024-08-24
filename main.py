@@ -123,22 +123,22 @@ else:
     if show_answer:
         if st.session_state['q']:
             st.write(st.session_state['q'])
-            st.write(_______________________________________________________)
+            st.divider()
         if st.session_state['linkedin']:
             st.write(st.session_state['linkedin'])
-            st.write(_______________________________________________________)
+            st.divider()
 
         if st.session_state['qa']:
             st.write(st.session_state['qa'])
-            st.write(_______________________________________________________)
+            st.divider()
 
         if st.session_state['cl']:
             st.write(st.session_state['cl'])
-            st.write(_______________________________________________________)
+            st.divider()
 
         if st.session_state['email']:
             st.write(st.session_state['email'])
-            st.write(_______________________________________________________)
+            st.divider()
 
     email_template = """Dear Colby and Nisar,
 
